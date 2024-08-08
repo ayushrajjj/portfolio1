@@ -434,6 +434,7 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
+    box-sizing: border-box;
 }
 
 footer a {
@@ -443,4 +444,21 @@ footer a {
 
 footer a:hover {
     color: blueviolet;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    footer .social-links a {
+        font-size: 18px;
+    }
 }
