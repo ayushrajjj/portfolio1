@@ -141,86 +141,76 @@
 
   <hr class="hr">
 
+<section id="contact">
   
-
-<style>
-    /* Fade out animation */
-    .fade-out {
-        animation: fadeOut 0.5s forwards;
-    }
-
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-        }
-    }
-
-    /* Success message styling */
-    .success-message {
-        display: none;
-        text-align: center;
-        margin-top: 20px;
-        color: green;
-        font-weight: bold;
-    }
-</style>
-
-<div class="container contact-form">
-    <div class="contact-image">
-        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
-    </div>
-    <form id="contactForm" action="https://formsubmit.co/vermaayushraj987@gmail.com" method="POST">
-        <h3>Drop Us a Message</h3>
-
-        <!-- Disable CAPTCHA -->
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name *" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email *" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number *" required>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Send Message">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
-                </div>
-            </div>
+    <h1 class="section-header">Contact</h1>
+    
+    <div class="contact-wrapper">
+    
+    <!-- Left contact page --> 
+      
+       <form action="https://formsubmit.co/vermaayushraj987@gmail.com" method="POST" class="form">
+         
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+          </div>
         </div>
-    </form>
-
-    <div class="success-message" id="successMessage">Thank you for your message!</div>
-</div>
-
-<script>
-    // jQuery to handle form submission
-    $(document).ready(function() {
-        $('#contactForm').on('submit', function(e) {
-            e.preventDefault(); // Prevent the default form submission
-
-            // Fade out the form
-            $(this).addClass('fade-out');
-
-            // Show success message after a short delay
-            setTimeout(() => {
-                $(this).hide(); // Hide the form
-                $('#successMessage').fadeIn(); // Show success message
-            }, 500); // Match this with the fade-out duration
-        });
-    });
-</script>
+  
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+          </div>
+        </div>
+  
+        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+        
+        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+          <div class="alt-send-button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        
+        </button>
+        
+      </form>
+      
+    <!-- Left contact page --> 
+      
+        <div class="direct-contact-container">
+  
+          <ul class="contact-list">
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">bangalore,karnataka</span></i></li>
+            
+            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">9934909187</a></span></i></li>
+            
+            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">vermaayushraj987@gmail.com</a></span></i></li>
+            
+          </ul>
+  
+          <hr>
+          <ul class="social-media-list">
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-codepen" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>       
+          </ul>
+          <hr>
+  
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+  
+        </div>
+      
+    </div>
+    
+  </section>  
     
   <div class="footer">
     
